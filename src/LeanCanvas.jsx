@@ -40,18 +40,20 @@ class LeanCanvas extends Component {
     return (
       <>
         <div className={classes.root}>
-          <div className="wrapper" style={{ marginTop: "3rem" }}>
-            <Problem />
-            <Solutions />
-            <KeyMetrics />
-            <UnfairAdvantage />
-            <UniqueValue />
-            <Channels />
-            <CustomerSegments />
-          </div>
-          <div className="wrapper">
-            <CodeStructure />
-            <RevenueStreams />
+          <div style={{ padding: "12.35rem 0" }}>
+            <div className="wrapper">
+              <Problem />
+              <Solutions />
+              <KeyMetrics />
+              <UnfairAdvantage />
+              <UniqueValue />
+              <Channels />
+              <CustomerSegments />
+            </div>
+            <div className="wrapper">
+              <CodeStructure />
+              <RevenueStreams />
+            </div>
           </div>
         </div>
       </>
