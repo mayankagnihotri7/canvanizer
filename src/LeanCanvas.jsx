@@ -14,7 +14,7 @@ class LeanCanvas extends Component {
   render() {
     return (
       <>
-        <div style={{ padding: "12.35rem 0" }}>
+        <div style={{ padding: "10.59rem 0" }}>
           <div className="wrapper">
             <Problem />
             <Solutions />
