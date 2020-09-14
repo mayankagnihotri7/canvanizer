@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { withStyles } from "@material-ui/core/styles";
 import Problem from "./Problem";
 import Solutions from "./Solutions";
 import KeyMetrics from "./KeyMetrics";
@@ -9,56 +8,33 @@ import Channels from "./Channels";
 import CustomerSegments from "./CustomerSegments";
 import CodeStructure from "./CodeStructure";
 import RevenueStreams from "./RevenueStreams";
-
-const styles = (theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-});
+import { NavLink } from "react-router-dom";
 
 class LeanCanvas extends Component {
-  constructor() {
-    super();
-    this.state = {
-      header: "",
-      side: "",
-    };
-  }
-
-  handleChange = ({ target: { name, value } }) => {
-    this.setState({ [name]: value });
-  };
-
   render() {
-    const { classes } = this.props;
-
     return (
       <>
-        <div className={classes.root}>
-          <div style={{ padding: "12.35rem 0" }}>
-            <div className="wrapper">
-              <Problem />
-              <Solutions />
-              <KeyMetrics />
-              <UnfairAdvantage />
-              <UniqueValue />
-              <Channels />
-              <CustomerSegments />
-            </div>
-            <div className="wrapper">
-              <CodeStructure />
-              <RevenueStreams />
-            </div>
+        <div style={{ padding: "12.35rem 0" }}>
+          <div className="wrapper">
+            <Problem />
+            <Solutions />
+            <KeyMetrics />
+            <UnfairAdvantage />
+            <UniqueValue />
+            <Channels />
+            <CustomerSegments />
           </div>
+          <div className="wrapper" style={{marginTop: "4px"}}>
+            <CodeStructure />
+            <RevenueStreams />
+          </div>
+          <button className="take-me-home-btn">
+            <NavLink to="/">Take me home</NavLink>
+          </button>
         </div>
       </>
     );
   }
 }
 
-export default withStyles(styles)(LeanCanvas);
+export default LeanCanvas;
