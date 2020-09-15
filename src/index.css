@@ -63,7 +63,7 @@ h6 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 5px;
-  max-width: 1500px;
+  max-width: 1600px;
   margin: 0 auto;
   grid-auto-rows: minmax(100px, auto);
 }
@@ -145,7 +145,6 @@ textarea {
   border-bottom: 1px solid #333;
   margin-top: 15px;
   outline: none;
-  scroll-margin: none;
 }
 
 .background-home {
